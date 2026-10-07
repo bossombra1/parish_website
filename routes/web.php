@@ -28,6 +28,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoHighlightController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/locale/{locale}', function (string $locale) { abort_unless(in_array($locale, ['fr','en'], true), 404); session(['locale'=>$locale]); return redirect()->back(); })->where('locale','fr|en')->name('locale.switch');
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', AboutController::class)->name('about');
 Route::view('/privacy-policy', 'privacy-policy')->name('privacy-policy');
