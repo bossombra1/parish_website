@@ -510,7 +510,7 @@
         <aside class="login-brand" aria-hidden="true">
             {{-- Background image matching hero section --}}
             <div class="login-brand-bg">
-                <img src="{{ \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/bg.webp') }}" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+                <img src="{{ \Illuminate\Support\Facades\asset('images/parish-logo.png') }}" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
                 <div class="login-brand-overlay"></div>
                 <div class="login-brand-radial"></div>
             </div>
