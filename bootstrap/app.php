@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\SetLocale;
+use App\Http\Middleware\TranslateResponse;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -15,6 +17,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
             'role' => \App\Http\Middleware\RoleMiddleware::class,
+            'locale' => SetLocale::class,
+            'translate' => TranslateResponse::class,
         ]);
 
         $middleware->throttleApi('api');
@@ -31,6 +35,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->validateCsrfTokens(except: [
             'paymongo/webhook',
             'webhooks/facebook-live',
+        ]);
+
+        $middleware->web(append: [
+            SetLocale::class,
+            TranslateResponse::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
