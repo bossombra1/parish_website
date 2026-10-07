@@ -109,3 +109,5 @@ Alpine.store('ui', {
 
 window.Alpine = Alpine;
 Alpine.start();
+
+import './locale-ui';
