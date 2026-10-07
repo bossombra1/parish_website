@@ -393,6 +393,10 @@ x-transition:leave-end="opacity-0 -translate-y-3"
             </a>
         </div>
     </div>
+    <div class="fixed top-5 right-4 z-[10000] flex items-center gap-1 rounded-full border border-white/20 bg-black/20 px-1 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md shadow-lg">
+        <a href="{{ route('locale.switch', 'fr') }}" class="rounded-full px-2.5 py-1 {{ app()->getLocale() === 'fr' ? 'bg-white text-[#0D2A52]' : 'text-white/80 hover:bg-white/10' }}">FR</a>
+        <a href="{{ route('locale.switch', 'en') }}" class="rounded-full px-2.5 py-1 {{ app()->getLocale() === 'en' ? 'bg-white text-[#0D2A52]' : 'text-white/80 hover:bg-white/10' }}">EN</a>
+    </div>
 </nav>
 
 <script>
