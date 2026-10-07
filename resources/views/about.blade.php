@@ -868,7 +868,7 @@
         <div class="calling-section">
             <div class="calling-img-wrap" data-reveal="scale">
                 <img
-                    src="{{ isset($global_settings['hero_image']) ? \Illuminate\Support\Facades\Storage::disk('supabase')->url($global_settings['hero_image']) : \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/bg.webp') }}"
+                    src="{{ isset($global_settings['hero_image']) ? \Illuminate\Support\Facades\Storage::disk('supabase')->url($global_settings['hero_image']) : asset('images/parish-logo.png') }}"
                     alt="Sto. Rosario Parish Church"
                 >
                 <div class="calling-badge">Est. 1983</div>
@@ -1048,14 +1048,14 @@
                 </div>
             </div>
             <div class="patron-img-wrap" data-reveal="scale">
-                <img src="{{ \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/olp.webp') }}" alt="Our Lady of the Most Holy Rosary">
+                <img src="{{ asset('images/parish-logo.png') }}" alt="Our Lady of the Most Holy Rosary">
                 <div class="patron-badge">Titular Patroness</div>
             </div>
         </div>
 
         <div class="patrons-layout" style="margin-top:100px;">
             <div class="patron-img-wrap" data-reveal="scale">
-                <img src="{{ \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/svf.webp') }}" alt="San Vicente Ferrer">
+                <img src="{{ asset('images/parish-logo.png') }}" alt="San Vicente Ferrer">
                 <div class="patron-badge">Segunda Patron</div>
             </div>
             <div class="patron-content" data-reveal="right">
