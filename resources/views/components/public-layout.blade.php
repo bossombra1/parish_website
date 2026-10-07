@@ -28,8 +28,7 @@
     <!-- Open Graph / Facebook -->
     @php
         $ogImageUrl = \Illuminate\Support\Facades\Cache::remember('public_og_image_url', now()->addDay(), function () {
-            $path = $global_settings['hero_image'] ?? 'assets/bg.webp';
-            return \Illuminate\Support\Facades\Storage::disk('supabase')->url($path);
+            return asset('images/parish-logo.png');
         });
     @endphp
     <meta property="og:type" content="website">
