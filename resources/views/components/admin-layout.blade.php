@@ -54,6 +54,10 @@
 </head>
 
 <body class="bg-[#F5F7FA] font-sans antialiased text-foreground">
+    <div class="fixed top-4 right-4 z-[10000] flex items-center gap-1 rounded-full border border-black/10 bg-white/90 px-1 py-1 text-[10px] font-bold uppercase tracking-wider text-[#0D2A52] shadow-lg backdrop-blur-md">
+        <a href="{{ route('locale.switch', 'fr') }}" class="rounded-full px-2.5 py-1 {{ app()->getLocale() === 'fr' ? 'bg-[#0D2A52] text-white' : 'text-[#0D2A52]/70 hover:bg-black/5' }}">FR</a>
+        <a href="{{ route('locale.switch', 'en') }}" class="rounded-full px-2.5 py-1 {{ app()->getLocale() === 'en' ? 'bg-[#0D2A52] text-white' : 'text-[#0D2A52]/70 hover:bg-black/5' }}">EN</a>
+    </div>
 
     {{-- Session flash → Alpine store --}}
     <div x-data x-init="
