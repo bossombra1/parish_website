@@ -9,7 +9,7 @@
 
 <section class="hero-section" style="position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;">
     <div style="position:absolute;inset:0;z-index:0;">
-        <img src="{{ \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/bg.webp') }}" alt="Sto. Rosario Parish" fetchpriority="high" decoding="async" width="1920" height="1080" style="width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.85);transform:scale(1.04);">
+        <img src="{{ asset('images/parish-logo.png') }}" alt="Sto. Rosario Parish" fetchpriority="high" decoding="async" width="1920" height="1080" style="width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.85);transform:scale(1.04);">
         <div class="hero-overlay" style="position:absolute;inset:0;"></div>
     </div>
     <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(26,64,128,.22) 0%,transparent 70%);"></div>
@@ -93,7 +93,7 @@
 
 <section class="relative pt-12 pb-24 overflow-hidden reveal reveal-up section-pad-mobile section-pad-tablet">
     <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
-        <img src="{{ \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/img/church1.webp') }}" alt="" class="w-full h-full object-cover" style="filter:saturate(.2) brightness(1.2) blur(4px);transform:scale(1.06);">
+        <img src="{{ asset('images/parish-logo.png') }}" alt="" class="w-full h-full object-cover" style="filter:saturate(.2) brightness(1.2) blur(4px);transform:scale(1.06);">
         <div style="position:absolute;inset:0;background:rgba(247,249,255,.89);"></div>
     </div>
 
@@ -187,7 +187,7 @@
 
         <a href="{{ route('events') }}" class="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl events-cta-banner" style="background:#0A2342;text-decoration:none;padding:24px;min-height:100px;transition:all .35s ease;" aria-label="View full events schedule">
             <div class="absolute left-0 top-[70%] -translate-y-1/2 pointer-events-none transition-transform duration-700 group-hover:scale-110" style="opacity:.5;height:150%;width:auto;" aria-hidden="true">
-                <img src="{{ \Illuminate\Support\Facades\Storage::disk('supabase')->url('assets/img/parish-illustration.svg') }}" alt="Parish Illustration" width="285" height="135" style="height:90%;width:auto;object-fit:contain;filter:brightness(0) invert(1);">
+                <img src="{{ asset('images/parish-logo.png') }}" alt="Parish Illustration" width="285" height="135" style="height:90%;width:auto;object-fit:contain;filter:brightness(0) invert(1);">
             </div>
             <div class="relative z-10 flex flex-col items-center gap-2">
                 <div class="flex items-center gap-3">
