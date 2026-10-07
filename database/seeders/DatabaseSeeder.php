@@ -84,7 +84,6 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Join us for our annual parish fiesta celebrations.',
                 'event_date' => now()->addMonths(2),
                 'event_time' => [['time' => '09:00:00', 'title' => 'Main Mass']],
-                'location' => 'Parish Grounds',
                 'is_published' => true,
             ]
         );
